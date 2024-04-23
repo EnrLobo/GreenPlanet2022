@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<title>Green Planet</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Arquivos CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/estilo.css">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="images/favicon.png">
+
+	<!-- Arquivos JS -->
+	<script src="js/bootstrap.bundle.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+<div class="container-fluid no-padding">
+
+<!-- start header -->
+<header class="fixed-top">
+	<section class="px-4 top-navigation">
+		<div class="row">
+			<div class="col-6">
+				<span class="fa-solid fa-envelope"></span> contato@greenplanet.com
+			</div>
+
+			<div class="col-6 text-end">
+				<a href="#"><span class="fa-brands fa-facebook-square me-2"></span></a>
+				<a href="#"><span class="fa-brands fa-instagram-square me-2"></span></a>
+				<a href="#"><span class="fa-brands fa-whatsapp-square"></span></a>
+			</div>
+		</div>
+	</section>
+
+	<nav class="navbar navbar-expand-lg px-4">
+		<div class="navbar-brand">
+			<a href="index.html"><img src="images/logo.png"></a>
+			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menubar"><span class="fa-solid fa-bars"></span></button>
+		</div>
+
+		<div class="collapse navbar-collapse justify-content-end" id="menubar">
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">meio ambiente</a>
+					<ul class="dropdown-menu">
+						<li class="dropdown-item"><a href="#renovavel" class="nav-link">Energia renovável</a></li>
+						<li class="dropdown-item"><a href="#floresta" class="nav-link">Floresta Amazônica</a></li>
+						<li class="dropdown-item"><a href="#energia" class="nav-link">Energia Eólica</a></li>
+						<li class="dropdown-item"><a href="#aquecimento" class="nav-link">Aquecimento Global</a></li>
+					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">minha conta</a>
+					<ul class="dropdown-menu">
+						<li class="dropdown-item"><a href="login.html" class="nav-link">login</a></li>
+						<li class="dropdown-item"><a href="cadastro.html" class="nav-link">cadastro</a></li>
+					</ul>
+				</li>
+				<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-contato">contato</a></li>
+			</ul>
+
+			<form action="">
+				<div class="input-group">
+					<input type="search" placeholder="buscar" class="form-control">
+					<!-- <input type="submit" value=""> -->
+					<button type="submit" class="input-group-text"><span class="fa-solid fa-magnifying-glass"></span></button>
+				</div>
+			</form>
+		</div>
+	</nav>
+
+	<script>
+		$(document).ready(function(){
+			$(window).on("scroll", function(){
+				if ($(window).scrollTop()>= 200){
+					$(".top-navigation").addClass("compressed");
+				} else {
+					$(".top-navigation").removeClass("compressed");
+				}
+			});
+		});
+	</script>
+</header>
+
+<div class="my-5 pt-5"></div>
+
+<!-- start cadastro -->
+<form action="" method="post" class="container my-5">
+    <h2 class="text-center text-uppercase fw-bold mb-5">Cadastro</h2>
+
+    <h2 class="mb-3"><span class="fas fa-user-plus"></span> identificação</h2>
+
+    <div class="row">
+        <div class="col-md-5">
+            <label for="">email</label>
+            <input type="email" name="" placeholder="por ex.: joaodasilva@email.com" class="form-control obrigatorio" required>
+            <small class="text-danger">campo obrigatório</small>
+        </div>
+        <div class="col-md-3">
+            <label for="">senha</label>
+            <input type="password" name="" placeholder="digite sua senha" class="form-control obrigatorio" required data-bs-toggle="popover" title="Atenção!" data-bs-content="sua senha deverá conter: <ul> <li>no mínimo 8 caracteres</li> <li>uma letra maiúscula</li> <li>um número</li> <li>um caracter especial</li></ul>" data-bs-trigger="hover focus" data-bs-html="true" data-bs-placement="top">
+            <small class="text-danger">campo obrigatório</small>
+        </div>
+
+        <div class="col-md-5 mt-3">
+            <label for="">nome</label>
+            <input type="text" name="" placeholder="digite seu nome completo" class="form-control obrigatorio" required>
+            <small class="text-danger">campo obrigatório</small>
+        </div>
+        <div class="col-md-3 mt-3">
+            <label for="">cpf</label>
+            <input type="text" name="" placeholder="digite somente números" class="form-control obrigatorio" required>
+            <small class="text-danger">campo obrigatório</small>
+        </div>
+
+        <div class="col-md-3"></div>
+
+        <div class="col-md-3 mt-3">
+            <label for="">sexo</label><br>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="tSexo" id="fem" value="fem" checked class="form-check-input"> <label for="fem" class="form-check-label">feminino</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="tSexo" id="masc" value="masc" class="form-check-input"> <label for="masc" class="form-check-label">masculino</label>
+            </div>
+        </div>
+        <div class="col-md-5 mt-3">
+            <label for="">envie uma foto</label>
+            <input type="file" name="" class="form-control border-secondary">
+        </div>
+    </div>
+
+    <h2 class="mb-5"><span class="fas fa-address-card"></span> endereço</h2>
+
+    <div class="row">
+        <div class="col-md-6 form-floating">
+            <input type="text" name="" placeholder="rua, praça, avenida, etc." class="form-control border-secondary">
+            <label for="" class="ms-3">endereço</label>
+        </div>
+        <div class="col-md-2 form-floating">
+            <!-- <input type="number" name="" placeholder="nº" class="form-control border-secondary" min="1" max="5"> -->
+            <input type="text" name="" placeholder="nº" class="form-control border-secondary">
+            <label for="" class="ms-3">número</label>
+        </div>
+    </div>
+</form>
+
+<!-- start footer -->
+<footer class="rodape p-3">
+	<section class="container">
+		<div class="row">
+			<div class="col-sm-6 text-center text-sm-start">
+				<img src="images/logo01.png">
+			</div>
+
+			<div class="col-sm-6 text-center text-sm-end pt-3">
+				<p>&copy; 2022 - Green Nature</p>
+			</div>
+		</div>
+	</section>
+</footer>
+</div>
+
+<div class="modal fade" id="modal-contato" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header border-0">
+				<h2><span class="fa-solid fa-envelope-open-text"></span> Contato</h2>
+				<button class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+			<form action="" method="">
+				<div class="modal-body">
+					<label for="">Nome:</label>
+					<input type="text" name="tName" placeholder="digite seu nome" class="form-control border-secondary">
+					<!-- <input type="text" name="tName" value="digite seu nome"> -->
+
+					<label for="" class="pt-4">Email:</label>
+					<input type="email" name="tMail" placeholder="por ex.: joaodasilva@email.com" class="form-control border-secondary">
+
+					<label for="" class="pt-4">Assunto:</label>
+					<input type="text" name="tAssunto" placeholder="digite o título de sua mensagem" class="form-control border-secondary">
+
+					<label for="" class="pt-4">Mensagem</label>
+					<textarea name="tMsg" rows="5" class="form-control border-secondary" style="resize:none;" placeholder="digite aqui sua mensagem"></textarea>
+				</div>
+				<div class="modal-footer border-0">
+					<input type="reset" value="limpar" class="btn btn-danger">
+					<input type="submit" value="enviar" class="btn btn-success">
+					<!-- <button class="btn btn-success" type="submit">enviar</button> -->
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- <script>
+	$(document).ready(function(){
+		$("#modal-contato").modal('show');
+	});
+</script> -->
+<script>	
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl)
+	});
+
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		return new bootstrap.Popover(popoverTriggerEl)
+	});
+
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function () {
+		'use strict'
+
+		// Fetch all the forms we want to apply custom Bootstrap validation styles to
+		var forms = document.querySelectorAll('.needs-validation')
+
+		// Loop over them and prevent submission
+		Array.prototype.slice.call(forms)
+			.forEach(function (form) {
+				form.addEventListener('submit', function (event) {
+					if (!form.checkValidity()) {
+					event.preventDefault()
+					event.stopPropagation()
+					}
+
+					form.classList.add('was-validated')
+				}, false)
+			})
+	})();
+</script>
+
+
+</body>
+</html>

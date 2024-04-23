@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Bootstrap</title>
+
+    <!-- Arquivos CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <style>
+      .container-fluid {
+        background-color: aqua;
+      }
+      .container {
+        background-color: brown;
+      }
+      .col1 {
+        background-color: darkgray;
+      }
+      .col2 {
+        background-color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    Olá Mundo!
+
+    <br /><br /><br /><br />
+    <div class="container-fluid">.container-fluid</div>
+
+    <br /><br /><br /><br />
+    <div class="container">.container</div>
+
+    <br /><br /><br /><br />
+    <div class="container">
+      <div class="row">
+        <div class="col col1">texto</div>
+        <div class="col col2">texto</div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br />
+    <div class="container">
+      <div class="row">
+        <div class="col-1 col1">texto</div>
+        <div class="col-4 col2">texto</div>
+        <div class="col-7 col1">texto</div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1 col-lg-6 col1">texto</div>
+        <div class="col-md-4 col-lg-3 col2">texto</div>
+        <div class="col-md-7 col-lg-3 col1">texto</div>
+      </div> 
+    </div>
+
+    <br><br><br><br>
+    <!-- Arquivos JS -->
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
